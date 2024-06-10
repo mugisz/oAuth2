@@ -2,14 +2,26 @@
     "version": 2,
     "builds": [
       {
-        "src": "./server.js",
+        "src": "server/server.js",
         "use": "@vercel/node"
+      },
+      {
+        "src": "comcast-portal/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "client/build"
+        }
       }
     ],
     "routes": [
       {
+        "src": "/api/(.*)",
+        "dest": "/back/server.js"
+      },
+      {
         "src": "/(.*)",
-        "destination": "/"
+        "dest": "/comcast-portal/build/$1"
       }
     ]
   }
+  
