@@ -10,9 +10,6 @@ const PORT = process.env.PORT;
 
 app.use(bodyParser.json());
 app.use(cors());
-app.use("/", (req, res) => {
-  res.send("Server is start on Vercel,port is: " + PORT);
-});
 
 const jwtSecret = process.env.JWT_SECRET;
 
