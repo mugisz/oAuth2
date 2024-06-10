@@ -6,7 +6,7 @@
         "use": "@vercel/node"
       },
       {
-        "src": "comcast-portal/package.json",
+        "src": "client/package.json",
         "use": "@vercel/static-build",
         "config": {
           "distDir": "client/build"
@@ -15,12 +15,12 @@
     ],
     "routes": [
       {
-        "src": "/api/(.*)",
-        "dest": "/back/server.js"
+        "src": "/routes/(.*)",
+        "dest": "/server/server.js"
       },
       {
         "src": "/(.*)",
-        "dest": "/comcast-portal/build/$1"
+        "dest": "/client/build/$1"
       }
     ]
   }
