@@ -1,1 +1,18 @@
-{ "version": 2, "rewrites": [{ "source": "/(.*)", "destination": "/api" }] }
+{
+    "routes": [
+      {
+        "src": "/api/accounts",
+        "dest": "./routes/account.js"
+      }
+    ],
+    "build": {
+      "commands": [
+        "npm install",
+        "npm run build"
+      ],
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+  
