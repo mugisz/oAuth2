@@ -9,9 +9,16 @@
     ],
     "routes": [
       {
+        "src": "/api/(.*)",
+        "dest": "/server/routes/$1"
+      },
+      {
         "src": "/(.*)",
         "dest": "/server/index.js"
       }
-    ]
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    }
   }
   
