@@ -88,7 +88,7 @@ const AccountPage = () => {
                 <strong>Creation date:</strong> {account.creationDate}
               </Typography>
               <Typography variant="body2">
-                <strong>Paid account:</strong> {account.isPaid ? "Так" : "Ні"}
+                <strong>Paid account:</strong> {account.isPaid ? "Yes" : "No"}
               </Typography>
               <Button
                 variant="outlined"
