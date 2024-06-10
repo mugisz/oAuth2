@@ -15,8 +15,16 @@
     ],
     "routes": [
       {
-        "src": "/routes/(.*)",
+        "src": "/api/(.*)",
         "dest": "/server/server.js"
+      },
+      {
+        "src": "/server/routes/(.*)",
+        "dest": "/server/routes/$1"
+      },
+      {
+        "src": "/server/controller/(.*)",
+        "dest": "/server/controller/$1"
       },
       {
         "src": "/(.*)",
